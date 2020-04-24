@@ -37,11 +37,10 @@
                     <!-- estado civil -->
                     <div class="mt-2 form-group">
                         <label for="inlineFormCustomSelect">Estado Civil</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="estado_civil">
-                            <option selected>Elige...</option>
-                            <option value="1">Soltero</option>
-                            <option value="2">Casado</option>
-                            <option value="3">Viudo/a</option>
+                        <select class="form-control" id="inlineFormCustomSelect" name="estado_civil">
+                            <option value="SOLTERO">SOLTERO</option>
+                            <option value="CASADO">CASADO</option>
+                            <option value="OTRO">OTRO</option>
                         </select>
                     </div>
                     <!-- tiene hijos? -->
@@ -60,25 +59,25 @@
                     </div>
                     <!-- intereses -->
                     <div class="form-group">
-                    <label for="intereses" class="control-label">Intereses</label>
-					
-					<div class="">
-						<label class="mr-2 checkbox-inline">
-							<input type="checkbox" id="intereses[]" name="intereses[]" value="Libros"> Libros
-						</label>
-						
-						<label class="mr-2 checkbox-inline">
-							<input type="checkbox" id="intereses[]" name="intereses[]" value="Musica"> Musica
-						</label>
-						
-						<label class="mr-2 checkbox-inline">
-							<input type="checkbox" id="intereses[]" name="intereses[]" value="Deportes"> Deportes
-						</label>
-						
-						<label class="mr-2 checkbox-inline">
-							<input type="checkbox" id="intereses[]" name="intereses[]" value="Otros"> Otros
-						</label>
-					</div>
+                        <label for="intereses" class=" control-label">INTERESES</label>
+
+                        <div class="">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="intereses[]" name="intereses[]" value="Libros"> Libros
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="intereses[]" name="intereses[]" value="Musica"> Musica
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="intereses[]" name="intereses[]" value="Deportes"> Deportes
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="intereses[]" name="intereses[]" value="Otros"> Otros
+                            </label>
+                        </div>
                     </div>
                     <!-- archivo -->
                     <div class=" form-group custom-file">
