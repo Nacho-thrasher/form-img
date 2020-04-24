@@ -22,22 +22,22 @@
                     <!-- nombre -->
                     <div class="form-group ">
                         <label for="inputname">Nombre</label>
-                        <input type="text" class="form-control" id="inputname">
+                        <input type="text" class="form-control" name="nombre" id="inputname">
                     </div>
                     <!-- email -->
                     <div class="form-group">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                        <input type="email" class="form-control" name="email" id="inputEmail4">
                     </div>
                     <!-- telef -->
                     <div class="form-group">
                         <label for="inputtel">Telefono</label>
-                        <input type="number" class="form-control" id="inputtel">
+                        <input type="number" class="form-control" name="telefono" id="inputtel">
                     </div>
                     <!-- estado civil -->
                     <div class="mt-2 form-group">
                         <label for="inlineFormCustomSelect">Estado Civil</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="estado_civil">
                             <option selected>Elige...</option>
                             <option value="1">Soltero</option>
                             <option value="2">Casado</option>
@@ -49,34 +49,36 @@
                         tiene hijos?
                         <div class="ml-4 form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
+                                value="1" name="hijos">
                             <label class="form-check-label" for="inlineRadio1">si</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
+                                value="0" name="hijos">
                             <label class="form-check-label" for="inlineRadio2">no</label>
                         </div>
                     </div>
                     <!-- intereses -->
                     <div class="form-group">
-                        <div class="mb-2">Intereses</div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">libros</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">musica</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox3">deportes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox4">otros</label>
-                        </div>
+                    <label for="intereses" class="control-label">Intereses</label>
+					
+					<div class="">
+						<label class="mr-2 checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Libros"> Libros
+						</label>
+						
+						<label class="mr-2 checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Musica"> Musica
+						</label>
+						
+						<label class="mr-2 checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Deportes"> Deportes
+						</label>
+						
+						<label class="mr-2 checkbox-inline">
+							<input type="checkbox" id="intereses[]" name="intereses[]" value="Otros"> Otros
+						</label>
+					</div>
                     </div>
                     <!-- archivo -->
                     <div class=" form-group custom-file">
