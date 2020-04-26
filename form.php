@@ -38,9 +38,10 @@
                     <div class="mt-2 form-group">
                         <label for="inlineFormCustomSelect">Estado Civil</label>
                         <select class="form-control" id="inlineFormCustomSelect" name="estado_civil">
-                            <option value="SOLTERO">SOLTERO</option>
-                            <option value="CASADO">CASADO</option>
-                            <option value="OTRO">OTRO</option>
+                            <option selected>Elije</option>
+                            <option value="soltero">soltero</option>
+                            <option value="casado">casado</option>
+                            <option value="otro">otro</option>
                         </select>
                     </div>
                     <!-- tiene hijos? -->
@@ -59,9 +60,9 @@
                     </div>
                     <!-- intereses -->
                     <div class="form-group">
-                        <label for="intereses" class=" control-label">INTERESES</label>
+                        <label for="intereses" class=" control-label">Intereses</label>
 
-                        <div class="">
+                        <div class="pl-3">
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="intereses[]" name="intereses[]" value="Libros"> Libros
                             </label>
@@ -85,6 +86,8 @@
                         <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                     </div>
                     <button class="btn btn-primary mt-3" type="submit">Guardar</button>
+                    <button class="btn btn-primary mt-3"><a href="index.php" class="text-white">Regresar</a></button>
+                    <!-- <a href="index.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Regresar</a> -->
                 </form>
             </div>
         </div>

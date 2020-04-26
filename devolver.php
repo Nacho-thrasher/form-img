@@ -52,7 +52,7 @@ $res= $conexionDB->query($SQL);
         <div class="row">
             <div class="">
                 <?php if ($res) { ?>
-                <h3>registro guardar</h3>
+                <h3>registro guardado</h3>
                 <?php }else { ?>
                 <h3>error al guardar</h3>
                 <?php } ?>
