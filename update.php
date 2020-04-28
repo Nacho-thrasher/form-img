@@ -1,6 +1,7 @@
 <?php
 
 include_once './conexion.php';
+$id = $_POST['id'];
 
 $nombre = $_POST['nombre'];
 
@@ -30,8 +31,7 @@ $intereses = isset($_POST['intereses']) ? $_POST['intereses'] : null;
     }
 	
 
-$SQL = "INSERT INTO `form`(`nombre`, `correo`, `telefono`, `estado_civil`, `hijos`, `intereses`) 
-VALUES ('$nombre','$email','$telefono','$estado_civil','$hijos','$arrayIntereses')";
+$SQL = "update form set nombre = '$nombre', correo = '$email', telefono = '$telefono', estado_civil = '$estado_civil', hijos = '$hijos', intereses = '$arrayIntereses' where id_form = '$id' ";
 
 $res= $conexionDB->query($SQL);
 // me trae el id recien insertado
@@ -68,6 +68,7 @@ foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
 }
 
 ?>
+<!-- en cada value llamar a la funcion devolver parametro -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -85,9 +86,9 @@ foreach($_FILES["archivo"]['tmp_name'] as $key => $tmp_name)
         <div class="row">
             <div class="">
                 <?php if ($res) { ?>
-                <h3>registro guardado</h3>
+                <h3>registro Modificado</h3>
                 <?php }else { ?>
-                <h3>error al guardar</h3>
+                <h3>error al modificar</h3>
                 <?php } ?>
                 
             </div>

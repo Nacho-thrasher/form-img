@@ -13,7 +13,7 @@ $res = $conexionDB->query($sql);
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://kit.fontawesome.com/85cbbbc4f0.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -34,7 +34,7 @@ $res = $conexionDB->query($sql);
         </div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-bordered">
+                <table class="table table-bordered mt-2">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -46,19 +46,43 @@ $res = $conexionDB->query($sql);
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                    while ($row = $res->fetch_array()) {
-                           
-                    }
-                        ?>
+                        <?php while ($row = $res->fetch_array()) { ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row"><?php echo $row['id_form'] ?></th>
+                            <td><?php echo $row['nombre'] ?></td>
+                            <td><?php echo $row['correo'] ?></td>
+                            <td><?php echo $row['telefono'] ?></td>
+                            <td class=" text-center"><a href="modificar.php?id=<?php echo $row['id_form']; ?>"><i
+                                        class="fas fa-edit"></i></a></td>
+                            <td class=" text-center"><a href="#"
+                                    data-href="eliminar.php?id=<?php echo $row['id_form']; ?>" data-toggle="modal"
+                                    data-target="#confirm-delete">
+                                    <i class="fas fa-trash-alt"></i></a></td>
                         </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Desea eliminar este registro?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger">Aceptar</button>
+                </div>
             </div>
         </div>
     </div>
